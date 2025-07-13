@@ -1,0 +1,114 @@
+
+
+@import url('https://fonts.googleapis.com/css2?family=Delius+Unicase:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wdth,wght@0,75..100,100..900;1,75..100,100..900&display=swap');
+@import url('./vars.css');
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+html,
+body {
+	font-family: var(--main-font-family);
+	font-size: var(--main-font-size);
+	color:#000;
+	min-height: 100vh;
+}
+
+.grid-container {
+	display: grid;
+	grid-template-columns: 1fr;
+	/* grid-template-rows: minmax(80px, 110px) 1fr; */
+	grid-template-rows: auto;
+	grid-template-areas: "header" "main";
+}
+
+.container{
+	max-width: var(--container-width);
+	margin: 0 auto;
+	padding: 0 15px;
+}
+
+.header {
+padding: 20px 0;
+grid-area: header;
+box-shadow: 1px 2px 5px 3px #00000055;
+}
+
+main {
+	padding: 40px 0;
+	grid-area: main;
+}
+
+.title_1 {
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+	font-size:1.9rem;
+	text-align: center;
+}
+
+.title_2 {
+	font-family: "Delius Unicase", cursive;
+	font-weight: 400;
+	font-style: normal;
+	font-size:1.8rem;
+	margin-bottom: 80px;
+	text-align: center;
+}
+
+.gallery {
+	/* border: 1px solid #000; */
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: repeat(auto-fit, minmax(370px, 1fr));
+	gap: 30px;
+}
+
+.gal__item {
+position: relative;
+}
+
+
+
+.gal__item_col-2 {
+	/* grid-column-start: 2;
+	grid-column-end: 4; */
+	grid-column: span 2;
+}
+
+.gal__img {
+	object-fit:cover;
+	object-position: 50% 50%;
+	width: 100%;
+	height: 100%;
+	max-width: 100%;
+	border-radius: 20px;
+}
+
+.gal__image:hover {
+background: linear-gradient(360deg, #241F24 0%, rgba(91, 91, 91, 0.447552) 34.11%, rgba(187, 186, 192, 0.26) 62.5%);
+}
+.gal__title {
+	display: flex;
+	justify-content: space-between;
+	position: absolute;
+	bottom: 0;
+	left:0;
+	width:100%;
+	padding: 15px 20px;
+	background: linear-gradient(360deg, #241F24 0%, rgba(91, 91, 91, 0.447552) 34.11%, rgba(187, 186, 192, 0.26) 62.5%);
+}
+
+.gal__author {
+	color: #fff;
+	font-weight: 500;
+
+}
+
+.gal__date {
+ color: #E0E0E0;
+font-weight: 400;
+}
+
